@@ -21,16 +21,19 @@ namespace TodoAPI.Controllers
             if (_context.TodoItems.Count() == 0)
             {
                 _context.TodoItems.Add(new TodoItem { Name="Lab1", IsComplete=true});
-                _context.TodoItems.Add(new TodoItem { Name="Lab2",IsComplete=false});
-                _context.TodoItems.Add(new TodoItem { Name="Lab3",IsComplete=false});
-                _context.TodoItems.Add(new TodoItem { Name="Lab4",IsComplete=false});
-                _context.TodoItems.Add(new TodoItem { Name="Lab5",IsComplete=false});
-                _context.TodoItems.Add(new TodoItem { Name="Lab6",IsComplete=false});
-                _context.TodoItems.Add(new TodoItem { Name="Lab7",IsComplete=false});
-                _context.TodoItems.Add(new TodoItem { Name="Lab8",IsComplete=false});
-                _context.TodoItems.Add(new TodoItem { Name="Lab9",IsComplete=false});
-                _context.TodoItems.Add(new TodoItem { Name="Lab10",IsComplete=false});
-                _context.TodoItems.Add(new TodoItem { Name="Lab11",IsComplete=false});
+                _context.TodoItems.Add(new TodoItem { Name="Lab2", IsComplete=false});
+                _context.TodoItems.Add(new TodoItem { Name="Lab3", IsComplete=false});
+                _context.TodoItems.Add(new TodoItem { Name="Lab4", IsComplete=false});
+                _context.TodoItems.Add(new TodoItem { Name="Lab5", IsComplete=false});
+                _context.TodoItems.Add(new TodoItem { Name="Lab6", IsComplete=false});
+                _context.TodoItems.Add(new TodoItem { Name="Lab7", IsComplete=false});
+                _context.TodoItems.Add(new TodoItem { Name="Lab8", IsComplete=false});
+                _context.TodoItems.Add(new TodoItem { Name="Lab9", IsComplete=false});
+                _context.TodoItems.Add(new TodoItem { Name="Lab10", IsComplete=false});
+                _context.TodoItems.Add(new TodoItem { Name="Lab11", IsComplete=false});
+
+                // ✅ Added new item for quiz#2
+                _context.TodoItems.Add(new TodoItem { Name="quiz#2", IsComplete=false});
             }
 
             _context.SaveChanges();
@@ -58,7 +61,6 @@ namespace TodoAPI.Controllers
         }
 
         // PUT: api/TodoItems/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutTodoItem(long id, TodoItem todoItem)
         {
@@ -89,7 +91,6 @@ namespace TodoAPI.Controllers
         }
 
         // POST: api/TodoItems
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<TodoItem>> PostTodoItem(TodoItem todoItem)
         {
