@@ -8,6 +8,7 @@ namespace TodoAPI
     {
         public static void Main(string[] args)
         {
+            console.log("issue fixed");
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
