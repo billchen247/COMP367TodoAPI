@@ -31,6 +31,7 @@ namespace TodoAPI.Controllers
                 _context.TodoItems.Add(new TodoItem { Name="Lab9",IsComplete=false});
                 _context.TodoItems.Add(new TodoItem { Name="Lab10",IsComplete=false});
                 _context.TodoItems.Add(new TodoItem { Name="Lab11",IsComplete=false});
+                _context.TodoItems.Add(new TodoItem { Name = "Quiz #2", IsComplete = false });
             }
 
             _context.SaveChanges();
